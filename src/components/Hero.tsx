@@ -110,7 +110,7 @@ export default function Hero() {
               View Projects <ArrowRight size={16} />
             </a>
             <a
-              href="/Sanz_Wadibhasme_Resume.pdf"
+              href="/Sanz Wadibhasme - Resume.pdf"
               download
               target="_blank"
               rel="noreferrer"
