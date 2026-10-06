@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-graphite-950 text-text-primary font-body antialiased;
+    overflow-x: hidden;
+  }
+  ::selection {
+    @apply bg-teal-400/30 text-teal-300;
+  }
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-graphite-950;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-graphite-600 rounded-full;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-teal-500/50;
+  }
+}
+
+@layer components {
+  .section-number {
+    @apply font-mono text-xs text-teal-400 tracking-widest;
+  }
+  .glass-card {
+    @apply bg-graphite-800/60 backdrop-blur-md border border-graphite-600 rounded-2xl;
+  }
+  .accent-line {
+    @apply h-px w-12 bg-gradient-to-r from-teal-400 to-amber-400;
+  }
+  .magnetic-btn {
+    @apply relative inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-medium transition-all duration-300;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
